@@ -18,7 +18,7 @@ class Comment extends Component{
                     {commen.comment}
                 </CardTitle>
                 <CardBody>
-                    <CardText>--{commen.author} , {commen.date}</CardText>
+                    <CardText>--{commen.author} , {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(commen.date)))}</CardText>
                 </CardBody>
             </Card>
             
